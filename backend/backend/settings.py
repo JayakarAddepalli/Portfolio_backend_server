@@ -25,7 +25,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'template')
 SECRET_KEY = 'django-insecure-8l*ri=f#u_6$vwt$qw#6^!)%7u680nbk^ws-gr@0^)hli7jqy)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 ALLOWED_HOSTS = ['portfolio-backend-server-xlff.onrender.com', 'jayakaraddepalliofficial.web.app', 'localhost', 'your-server-ip', '127.0.0.1', '0.0.0.0']
