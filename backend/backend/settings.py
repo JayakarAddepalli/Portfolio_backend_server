@@ -60,7 +60,10 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True # This allows all origins during development
-
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://jayakaraddepalliofficial.web.app",  # React app URL (adjust as needed)
+]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://localhost:3000',  # If you're testing locally over HTTPS
