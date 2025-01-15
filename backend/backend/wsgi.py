@@ -8,10 +8,10 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 """
 
 import os, sys
-sys.path.append('/opt/render/backend/feedback')
 
 from django.core.wsgi import get_wsgi_application
 
+sys.path.append(os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.backend.settings')
 
 application = get_wsgi_application()
