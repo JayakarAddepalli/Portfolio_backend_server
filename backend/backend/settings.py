@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-8l*ri=f#u_6$vwt$qw#6^!)%7u680nbk^ws-gr@0^)hli7jqy)
 DEBUG = False
 
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-ALLOWED_HOSTS = ['portfolio-backend-server-xlff.onrender.com', 'jayakaraddepalliofficial.web.app', 'localhost', 'your-server-ip', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['portfolio-backend-server-xlff.onrender.com', 'jayakaraddepalliofficial.web.app', 'localhost', '127.0.0.1', '0.0.0.0']
 
 
 
@@ -63,14 +63,16 @@ CORS_ALLOW_ALL_ORIGINS = True # This allows all origins during development
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:3000',
-    "http://192.168.55.101:3000",  # If you need to access from mobile app
+    'https://localhost:3000',  # If you're testing locally over HTTPS
+    'https://jayakaraddepalliofficial.web.app',  # Your live frontend URL
+    'https://portfolio-backend-server-xlff.onrender.com',  # Your live backend URL
 ]
 
 CSRF_COOKIE_NAME = "csrftoken"
 CSRF_COOKIE_HTTPONLY = False
 CSRF_COOKIE_SAMESITE = 'Lax'  # Adjust if needed (e.g., 'None' for cross-origin requests with HTTPS)
-CSRF_COOKIE_SECURE = False    # Set True if using HTTPS in production
+CSRF_COOKIE_SECURE = True    # Set True if using HTTPS in production
+SESSION_COOKIE_SECURE = True
 
 ROOT_URLCONF = 'backend.backend.urls'
 
