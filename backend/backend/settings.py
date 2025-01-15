@@ -72,7 +72,7 @@ CSRF_COOKIE_HTTPONLY = False
 CSRF_COOKIE_SAMESITE = 'Lax'  # Adjust if needed (e.g., 'None' for cross-origin requests with HTTPS)
 CSRF_COOKIE_SECURE = False    # Set True if using HTTPS in production
 
-ROOT_URLCONF = 'backend.urls'
+ROOT_URLCONF = 'backend.backend.urls'
 
 TEMPLATES = [
     {
